@@ -1,16 +1,14 @@
 function lik = lik_WSLS(P,data)
 
 
-% win stay lose shift (WSLS) likelihood function
+    % Win-stay-lose-shift (WSLS) likelihood function
     %
-    % USAGE: lik = lik_loseshift(P,data)
+    % USAGE: lik = lik_WSLS (P,data)
     %
     % INPUTS:
     %   P - structure of S parameter samples, with the following fields:
-    %           .lose_shift - [S x 1] bernoulli parameter for lose-shift
-    %           rate
-    %           .win_stay - [S x 1] bernoulli parameter for lose-shift
-    %           rate
+    %           .lose_shift - [S x 1] bernoulli parameter for lose-shift rate
+    %           .win_stay - [S x 1] bernoulli parameter for win-stay rate
   
     %   data - structure with the following fields:
     %          .C - [N x 1] choices
@@ -19,7 +17,7 @@ function lik = lik_WSLS(P,data)
     % OUTPUTS:
     %   lik - [S x 1] log-likelihoods
     %
-    % Eran Eldar, June 2018
+    % Paul Sharp, May 2019
     
     S = size(P.win_stay,1); % number of samples of parameters
     win_stay=P.win_stay;
