@@ -15,7 +15,7 @@ function lik = lik_moodyRL(P,data)
     % OUTPUTS:
     %   lik - [S x 1] log-likelihoods
     %
-    % Eran Eldar, June 2018
+    % Paul Sharp, May 2019
     
     S = size(P.invtemp,1); % number of parameters
     Nc = max(unique(data.C)); % number of options
